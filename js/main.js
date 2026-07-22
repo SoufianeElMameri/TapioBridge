@@ -107,13 +107,13 @@ document.querySelector(".contact-form")?.addEventListener("submit", async (event
 
     form.reset();
     if (status) {
-      status.textContent = "Thanks. Your enquiry was submitted. If this is the first test, check forsubs1289@gmail.com for a FormSubmit activation email, including spam.";
+      status.textContent = "Thanks. Your enquiry has been submitted.";
       status.classList.add("is-success");
     }
     button.textContent = "Sent";
   } catch (error) {
     if (status) {
-      status.textContent = "Something went wrong. Please email forsubs1289@gmail.com directly.";
+      status.textContent = "Something went wrong. Please try again in a moment.";
       status.classList.add("is-error");
     }
     button.textContent = originalText;
