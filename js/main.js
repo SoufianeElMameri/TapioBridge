@@ -113,7 +113,7 @@ document.querySelector(".contact-form")?.addEventListener("submit", async (event
     button.textContent = "Sent";
   } catch (error) {
     if (status) {
-      status.textContent = "Something went wrong. Please try again in a moment.";
+      status.textContent = "Something went wrong. Please email contact@tapiobridge.com directly.";
       status.classList.add("is-error");
     }
     button.textContent = originalText;
