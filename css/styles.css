@@ -120,7 +120,6 @@ textarea {
   position: absolute;
   inset: -3%;
   z-index: -2;
-  background-image: url("../assets/images/tapiobridge-hero-background.png");
   background-size: cover;
   background-position: center;
   transform: scale(1.03);
@@ -868,7 +867,7 @@ textarea:focus {
   min-height: 100vh;
   padding: 8rem max(1rem, calc((100% - 1280px) / 2)) 4rem;
   color: #242428;
-  background: #e8e6e2 url("../assets/images/tapiobridge-hero-v4.png") center / cover no-repeat;
+  background: #e8e6e2 url("../assets/images/tapiobridge-hero.webp") center / cover no-repeat;
 }
 
 .hero::before,
@@ -904,8 +903,11 @@ textarea:focus {
   opacity: 0;
   transform: translateY(105%) rotateX(-72deg);
   transform-origin: 0 0;
-  animation: pageTurnIn 760ms cubic-bezier(0.22, 0.68, 0.28, 1) both;
   will-change: transform, opacity;
+}
+
+.hero.hero-ready .hero-line > span {
+  animation: pageTurnIn 760ms cubic-bezier(0.22, 0.68, 0.28, 1) both;
 }
 
 .hero-line:nth-child(1) > span { animation-delay: 300ms; }

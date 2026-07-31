@@ -5,6 +5,28 @@ const sections = document.querySelectorAll("main section[id]");
 const navAnchors = document.querySelectorAll(".nav-links a");
 const traceMessage = document.querySelector("#trace-message");
 const consoleState = document.querySelector("#console-state");
+const hero = document.querySelector(".hero");
+
+if (hero) {
+  const heroImage = new Image();
+  const revealHero = () => hero.classList.add("hero-ready");
+  const decodeHero = () => {
+    if (typeof heroImage.decode === "function") {
+      heroImage.decode().then(revealHero).catch(revealHero);
+    } else {
+      revealHero();
+    }
+  };
+
+  heroImage.src = "assets/images/tapiobridge-hero.webp";
+
+  if (heroImage.complete) {
+    decodeHero();
+  } else {
+    heroImage.addEventListener("load", decodeHero, { once: true });
+    heroImage.addEventListener("error", revealHero, { once: true });
+  }
+}
 
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
