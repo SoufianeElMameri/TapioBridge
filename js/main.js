@@ -76,7 +76,7 @@ const activeObserver = new IntersectionObserver(
 
 sections.forEach((section) => activeObserver.observe(section));
 
-document.querySelector(".contact-form")?.addEventListener("submit", async (event) => {
+document.querySelector(".contact-form, .contact-form-new")?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const form = event.currentTarget;
   const button = form.querySelector("button");
