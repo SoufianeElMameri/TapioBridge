@@ -1124,8 +1124,8 @@ textarea:focus {
   .hero { min-height: 100svh; padding: 8rem 1.25rem 5rem; background-position: 57% center; background-size: cover; }
   .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(244, 242, 238, 0.3); }
   .hero-copy { width: 100%; align-self: center; }
-  .hero h1 { max-width: 11ch; font-size: clamp(2.05rem, 9.5vw, 3.1rem); }
-  .hero-line > span { white-space: normal; }
+  .hero h1 { max-width: none; font-size: clamp(1.9rem, 8.6vw, 2.8rem); }
+  .hero-line > span { white-space: nowrap; }
   .section-focus {
     grid-template-columns: 1fr;
     width: 100%;
