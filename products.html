@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore TapioBridge products for Yardi, Outlook and EspoCRM workflows.">
+    <title>Products | TapioBridge</title>
+    <link rel="icon" type="image/png" href="assets/images/tapiobridge-logo-256.png">
+    <link rel="apple-touch-icon" href="assets/images/tapiobridge-logo-256.png">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="products-page">
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="TapioBridge home">
+        <img src="assets/images/tapiobridge-logo-256.png" alt="" class="brand-logo" width="256" height="256">
+        <span>TapioBridge</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#focus">Focus</a>
+        <div class="nav-products open-page">
+          <button class="products-toggle" type="button" aria-expanded="false" aria-controls="products-menu">
+            Products <span aria-hidden="true"></span>
+          </button>
+          <div class="products-menu" id="products-menu">
+            <a href="#yardi"><small>Yardi</small><strong>Connector for Outlook</strong></a>
+            <a href="#espocrm"><small>EspoCRM</small><strong>Signature Manager</strong></a>
+          </div>
+        </div>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="header-link" href="index.html#contact">Start a Conversation</a>
+    </header>
+
+    <main class="product-library">
+      <section class="library-hero">
+        <div class="library-hero-copy">
+          <p class="library-eyebrow">TapioBridge products</p>
+          <h1>Products built to<br><span>connect</span> your workflow.</h1>
+          <p>Applications and integrations for Yardi and EspoCRM.</p>
+        </div>
+      </section>
+
+      <section class="library-catalogue" id="products" aria-labelledby="catalogue-title">
+        <div class="library-heading">
+          <div>
+            <p class="section-no">Our products</p>
+            <h2 id="catalogue-title">Browse by CRM</h2>
+          </div>
+          <div class="product-filters">
+            <div class="filter-row"><span>CRM</span><div class="crm-filters" role="group" aria-label="Filter products by CRM">
+              <button class="active" type="button" data-crm-filter="all" aria-pressed="true">All</button>
+              <button type="button" data-crm-filter="yardi" aria-pressed="false">Yardi</button>
+              <button type="button" data-crm-filter="espocrm" aria-pressed="false">EspoCRM</button>
+            </div></div>
+            <div class="filter-row"><span>App type</span><div class="crm-filters" role="group" aria-label="Filter products by app type">
+              <button class="active" type="button" data-type-filter="all" aria-pressed="true">All</button>
+              <button type="button" data-type-filter="integration" aria-pressed="false">Integration</button>
+              <button type="button" data-type-filter="productivity" aria-pressed="false">Productivity</button>
+            </div></div>
+            <button class="free-toggle" type="button" data-free-filter aria-pressed="false">Free</button>
+          </div>
+        </div>
+
+        <div class="product-card-grid" aria-live="polite">
+          <article class="library-card" id="yardi" data-crm="yardi" data-app-type="integration" data-free="false">
+            <span class="card-crm-badge">For Yardi</span>
+            <img class="library-card-logo" src="assets/images/yardi-connector-logo.png" alt="Yardi Connector app logo" width="256" height="256">
+            <h3>Yardi Connector for Outlook</h3>
+            <p class="card-description">An Outlook add-in that reads the sender of the open email, finds the matching resident in Yardi, and displays their contact, resident, property, unit and lease information in the Outlook task pane. The displayed record updates when the user opens a different message.</p>
+            <div class="card-footer"><div class="card-tags"><span>Integration</span></div><a href="index.html#contact">Discuss this product <b aria-hidden="true">&#8594;</b></a></div>
+          </article>
+
+          <article class="library-card" id="espocrm" data-crm="espocrm" data-app-type="productivity" data-free="true">
+            <span class="card-crm-badge">For EspoCRM</span>
+            <img class="library-card-logo" src="assets/images/signature-manager-logo.png" alt="Signature Manager app logo" width="256" height="256">
+            <h3>Signature Manager</h3>
+            <p class="card-description">An EspoCRM extension that lets users create and manage multiple named HTML signatures, choose a personal default, and select the appropriate signature from the email composer. Signature records follow EspoCRM ownership and access controls.</p>
+            <div class="card-footer"><div class="card-tags"><span>Productivity</span><span class="free-tag">$0</span></div><a href="index.html#contact">Discuss this product <b aria-hidden="true">&#8594;</b></a></div>
+          </article>
+          <p class="filter-empty is-hidden">No products match the selected filters.</p>
+        </div>
+
+        <div class="library-contact">
+          <div><p class="section-no">Need a different connection?</p><h2>Tell us about the workflow.</h2></div>
+          <a href="index.html#contact">Contact us <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </section>
+
+      <section class="library-assurances" aria-label="Product commitments">
+        <article><img src="assets/icons/define.svg" alt=""><div><h2>CRM focused</h2><p>Each product is made for a defined system.</p></div></article>
+        <article><img src="assets/icons/build.svg" alt=""><div><h2>Practical setup</h2><p>Clear installation and configuration.</p></div></article>
+        <article><img src="assets/icons/listen.svg" alt=""><div><h2>Direct support</h2><p>Help from the people building the product.</p></div></article>
+        <article><img src="assets/icons/launch.svg" alt=""><div><h2>Maintained</h2><p>Updates as workflows and platforms change.</p></div></article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand footer-brand" href="index.html" aria-label="TapioBridge home">
+          <img src="assets/images/tapiobridge-logo-256.png" alt="" class="brand-logo" width="256" height="256">
+          <span>TapioBridge</span>
+        </a>
+        <p>Focused software for workflow information and functionality.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html#focus">Focus</a>
+        <a href="products.html">Products</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="copyright">&copy; 2026 TapioBridge. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

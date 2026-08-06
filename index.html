@@ -25,6 +25,15 @@
       </button>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#focus">Focus</a>
+        <div class="nav-products">
+          <button class="products-toggle" type="button" aria-expanded="false" aria-controls="products-menu">
+            Products <span aria-hidden="true"></span>
+          </button>
+          <div class="products-menu" id="products-menu">
+            <a href="products.html#products"><small>Yardi</small><strong>Connector for Outlook</strong></a>
+            <a href="products.html#products"><small>EspoCRM</small><strong>Signature Manager</strong></a>
+          </div>
+        </div>
         <a href="#process">Process</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -72,7 +81,25 @@
         </div>
       </section>
 
-      <section class="statement"><p class="reveal">Software should remove the journey between <em>knowing what to do</em> and <em>being able to do it.</em></p></section>
+      <section class="product-preview" id="products">
+        <div class="preview-heading reveal">
+          <p class="section-no">Products</p>
+          <h2>Made for the gap<br><em>between systems.</em></h2>
+          <a href="products.html">View all products <span aria-hidden="true">&#8594;</span></a>
+        </div>
+        <div class="preview-list reveal">
+          <a href="products.html#products">
+            <span class="preview-system">Yardi + Outlook</span>
+            <strong>Connector for Outlook</strong>
+            <span class="preview-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          <a href="products.html#products">
+            <span class="preview-system">EspoCRM</span>
+            <strong>Signature Manager</strong>
+            <span class="preview-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </section>
 
       <section class="about-new split" id="about">
         <div class="split-title reveal"><p class="section-no">04 / About</p><h2>Practical software,<br><em>carefully made.</em></h2></div>
@@ -103,6 +130,7 @@
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#focus">Focus</a>
+        <a href="products.html">Products</a>
         <a href="#process">Process</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>

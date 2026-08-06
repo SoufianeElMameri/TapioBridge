@@ -6,6 +6,13 @@ const navAnchors = document.querySelectorAll(".nav-links a");
 const traceMessage = document.querySelector("#trace-message");
 const consoleState = document.querySelector("#console-state");
 const hero = document.querySelector(".hero");
+const productsToggle = document.querySelector(".products-toggle");
+const productsNav = document.querySelector(".nav-products");
+const crmFilterButtons = document.querySelectorAll("[data-crm-filter]");
+const typeFilterButtons = document.querySelectorAll("[data-type-filter]");
+const freeFilterButton = document.querySelector("[data-free-filter]");
+const productCards = document.querySelectorAll("[data-crm]");
+const filterEmpty = document.querySelector(".filter-empty");
 
 if (hero) {
   const heroImage = new Image();
@@ -35,10 +42,90 @@ if (navToggle && navLinks) {
   });
 
   navLinks.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
+    if (event.target instanceof Element && event.target.closest("a")) {
       navLinks.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
     }
+  });
+}
+
+if (productsToggle && productsNav) {
+  const closeProducts = () => {
+    productsNav.classList.remove("open");
+    productsToggle.setAttribute("aria-expanded", "false");
+  };
+
+  productsToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isOpen = productsNav.classList.toggle("open");
+    productsToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  productsNav.addEventListener("click", (event) => {
+    if (event.target instanceof Element && event.target.closest("a")) closeProducts();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!productsNav.contains(event.target)) closeProducts();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeProducts();
+      productsToggle.focus();
+    }
+  });
+}
+
+if (crmFilterButtons.length && typeFilterButtons.length && productCards.length) {
+  let selectedCrm = "all";
+  let selectedType = "all";
+  let freeOnly = false;
+
+  const applyProductFilters = () => {
+    let visibleCount = 0;
+
+    productCards.forEach((card) => {
+      const matchesCrm = selectedCrm === "all" || card.dataset.crm === selectedCrm;
+      const matchesType = selectedType === "all" || card.dataset.appType === selectedType;
+      const matchesPrice = !freeOnly || card.dataset.free === "true";
+      const shouldShow = matchesCrm && matchesType && matchesPrice;
+      card.classList.toggle("is-hidden", !shouldShow);
+      if (shouldShow) visibleCount += 1;
+    });
+
+    filterEmpty?.classList.toggle("is-hidden", visibleCount !== 0);
+  };
+
+  const activateExclusiveFilter = (buttons, selectedButton) => {
+    buttons.forEach((button) => {
+      const isActive = button === selectedButton;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+  };
+
+  crmFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedCrm = button.dataset.crmFilter;
+      activateExclusiveFilter(crmFilterButtons, button);
+      applyProductFilters();
+    });
+  });
+
+  typeFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedType = button.dataset.typeFilter;
+      activateExclusiveFilter(typeFilterButtons, button);
+      applyProductFilters();
+    });
+  });
+
+  freeFilterButton?.addEventListener("click", () => {
+    freeOnly = !freeOnly;
+    freeFilterButton.classList.toggle("active", freeOnly);
+    freeFilterButton.setAttribute("aria-pressed", String(freeOnly));
+    applyProductFilters();
   });
 }
 
