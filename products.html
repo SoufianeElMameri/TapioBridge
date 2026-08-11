@@ -57,16 +57,22 @@
               <button class="active" type="button" data-crm-filter="all" aria-pressed="true">All</button>
               <button type="button" data-crm-filter="yardi" aria-pressed="false">Yardi</button>
               <button type="button" data-crm-filter="espocrm" aria-pressed="false">EspoCRM</button>
+              <button type="button" data-crm-filter="frappe" aria-pressed="false">Frappe</button>
+              <button type="button" data-crm-filter="odoo" aria-pressed="false">Odoo Community</button>
             </div></div>
             <div class="filter-row"><span>App type</span><div class="crm-filters" role="group" aria-label="Filter products by app type">
               <button class="active" type="button" data-type-filter="all" aria-pressed="true">All</button>
               <button type="button" data-type-filter="integration" aria-pressed="false">Integration</button>
               <button type="button" data-type-filter="productivity" aria-pressed="false">Productivity</button>
+              <button type="button" data-type-filter="scheduling" aria-pressed="false">Scheduling</button>
+              <button type="button" data-type-filter="communication" aria-pressed="false">Communication</button>
+              <button type="button" data-type-filter="data-management" aria-pressed="false">Data management</button>
             </div></div>
             <button class="free-toggle" type="button" data-free-filter aria-pressed="false">Free</button>
           </div>
         </div>
 
+        <div class="catalogue-product-section" data-product-section>
         <div class="product-card-grid" aria-live="polite">
           <article class="library-card" id="yardi" data-crm="yardi" data-app-type="integration" data-free="false">
             <span class="card-crm-badge">For Yardi</span>
@@ -83,8 +89,91 @@
             <p class="card-description">An EspoCRM extension that lets users create and manage multiple named HTML signatures, choose a personal default, and select the appropriate signature from the email composer. Signature records follow EspoCRM ownership and access controls.</p>
             <div class="card-footer"><div class="card-tags"><span>Productivity</span><span class="free-tag">$0</span></div><a href="index.html#contact">Discuss this product <b aria-hidden="true">&#8594;</b></a></div>
           </article>
-          <p class="filter-empty is-hidden">No products match the selected filters.</p>
         </div>
+        </div>
+
+        <section class="catalogue-product-section open-source-section" data-product-section aria-labelledby="open-source-title">
+          <header class="open-source-heading">
+            <h2 id="open-source-title">Open source applications</h2>
+            <p>Useful CRM applications maintained by their respective open-source projects.</p>
+          </header>
+
+          <div class="product-card-grid open-source-grid">
+            <article class="library-card open-source-card" data-crm="espocrm" data-app-type="productivity" data-free="true">
+              <span class="card-crm-badge">For EspoCRM</span>
+              <div class="oss-card-mark" aria-hidden="true">FS</div>
+              <h3>File Sharing</h3>
+              <p class="card-description">Adds public file-sharing records to EspoCRM with optional expiry dates, download limits, direct downloads and in-browser attachment previews.</p>
+              <div class="card-footer"><div class="card-tags"><span>Productivity</span><span class="open-source-tag">Open source</span></div><a href="open-source/file-sharing.html">Learn more <b aria-hidden="true">&#8594;</b></a></div>
+            </article>
+
+            <article class="library-card open-source-card" data-crm="espocrm" data-app-type="productivity" data-free="true">
+              <span class="card-crm-badge">For EspoCRM</span>
+              <div class="oss-card-mark" aria-hidden="true">ML</div>
+              <h3>Mass Lead Conversion</h3>
+              <p class="card-description">Adds a bulk action to the EspoCRM lead list so selected leads can be converted into contacts, accounts, opportunities or configured custom entity types.</p>
+              <div class="card-footer"><div class="card-tags"><span>Productivity</span><span class="open-source-tag">Open source</span></div><a href="open-source/mass-lead-conversion.html">Learn more <b aria-hidden="true">&#8594;</b></a></div>
+            </article>
+
+            <article class="library-card open-source-card" data-crm="frappe" data-app-type="scheduling" data-free="true">
+              <span class="card-crm-badge">For Frappe</span>
+              <div class="oss-card-mark" aria-hidden="true">FA</div>
+              <h3>Frappe Appointment</h3>
+              <p class="card-description">Provides appointment scheduling with Google Calendar conflict checks, ERPNext leave awareness, meeting-link generation and participant rescheduling.</p>
+              <div class="card-footer"><div class="card-tags"><span>Scheduling</span><span class="open-source-tag">Open source</span></div><a href="open-source/frappe-appointment.html">Learn more <b aria-hidden="true">&#8594;</b></a></div>
+            </article>
+
+            <article class="library-card open-source-card" data-crm="frappe" data-app-type="integration" data-free="true">
+              <span class="card-crm-badge">For Frappe</span>
+              <div class="oss-card-mark" aria-hidden="true">PC</div>
+              <h3>PibiCal</h3>
+              <p class="card-description">Synchronizes Frappe or ERPNext calendar events with Nextcloud, ownCloud and other CalDAV servers, including recurring events and multiple calendars.</p>
+              <div class="card-footer"><div class="card-tags"><span>Integration</span><span class="open-source-tag">Open source</span></div><a href="open-source/pibical.html">Learn more <b aria-hidden="true">&#8594;</b></a></div>
+            </article>
+
+            <article class="library-card open-source-card" data-crm="frappe" data-app-type="communication" data-free="true">
+              <span class="card-crm-badge">For Frappe</span>
+              <div class="oss-card-mark" aria-hidden="true">CC</div>
+              <h3>ClefinCode Chat</h3>
+              <p class="card-description">Adds self-hosted direct and group chat to Frappe and ERPNext, with files, voice clips, document-linked discussions and supported customer messaging channels.</p>
+              <div class="card-footer"><div class="card-tags"><span>Communication</span><span class="open-source-tag">Open source</span></div><a href="open-source/clefincode-chat.html">Learn more <b aria-hidden="true">&#8594;</b></a></div>
+            </article>
+
+            <article class="library-card open-source-card" data-crm="odoo" data-app-type="productivity" data-free="true">
+              <span class="card-crm-badge">For Odoo Community</span>
+              <div class="oss-card-mark" aria-hidden="true">LT</div>
+              <h3>CRM Lead to Task</h3>
+              <p class="card-description">Converts a CRM lead or opportunity into a project task while preserving its messages and attachments, with optional lead archiving and project assignment.</p>
+              <div class="card-footer"><div class="card-tags"><span>Productivity</span><span class="open-source-tag">Open source</span></div><a href="open-source/crm-lead-to-task.html">Learn more <b aria-hidden="true">&#8594;</b></a></div>
+            </article>
+
+            <article class="library-card open-source-card" data-crm="odoo" data-app-type="data-management" data-free="true">
+              <span class="card-crm-badge">For Odoo Community</span>
+              <div class="oss-card-mark" aria-hidden="true">PR</div>
+              <h3>Partner Contact Role</h3>
+              <p class="card-description">Adds reusable roles and responsibilities to Odoo contacts so one person can hold several business roles beyond a single job-position field.</p>
+              <div class="card-footer"><div class="card-tags"><span>Data management</span><span class="open-source-tag">Open source</span></div><a href="open-source/partner-contact-role.html">Learn more <b aria-hidden="true">&#8594;</b></a></div>
+            </article>
+
+            <article class="library-card open-source-card" data-crm="odoo" data-app-type="data-management" data-free="true">
+              <span class="card-crm-badge">For Odoo Community</span>
+              <div class="oss-card-mark" aria-hidden="true">LC</div>
+              <h3>CRM Lead Code</h3>
+              <p class="card-description">Assigns a sequential reference code to Odoo leads and opportunities, making individual CRM records easier to identify and reference consistently.</p>
+              <div class="card-footer"><div class="card-tags"><span>Data management</span><span class="open-source-tag">Open source</span></div><a href="open-source/crm-lead-code.html">Learn more <b aria-hidden="true">&#8594;</b></a></div>
+            </article>
+
+            <article class="library-card open-source-card" data-crm="odoo" data-app-type="data-management" data-free="true">
+              <span class="card-crm-badge">For Odoo Community</span>
+              <div class="oss-card-mark" aria-hidden="true">DF</div>
+              <h3>Partner Deduplicate Filter</h3>
+              <p class="card-description">Adds filters to Odoo’s contact-deduplication tool so a cleanup can be restricted to companies, standalone contacts or contacts linked to a parent company.</p>
+              <div class="card-footer"><div class="card-tags"><span>Data management</span><span class="open-source-tag">Open source</span></div><a href="open-source/partner-deduplicate-filter.html">Learn more <b aria-hidden="true">&#8594;</b></a></div>
+            </article>
+          </div>
+        </section>
+
+        <p class="filter-empty is-hidden">No products match the selected filters.</p>
 
         <div class="library-contact">
           <div><p class="section-no">Need a different connection?</p><h2>Tell us about the workflow.</h2></div>

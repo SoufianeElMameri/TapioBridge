@@ -13,6 +13,7 @@ const typeFilterButtons = document.querySelectorAll("[data-type-filter]");
 const freeFilterButton = document.querySelector("[data-free-filter]");
 const productCards = document.querySelectorAll("[data-crm]");
 const filterEmpty = document.querySelector(".filter-empty");
+const productSections = document.querySelectorAll("[data-product-section]");
 
 if (hero) {
   const heroImage = new Image();
@@ -92,6 +93,13 @@ if (crmFilterButtons.length && typeFilterButtons.length && productCards.length) 
       const shouldShow = matchesCrm && matchesType && matchesPrice;
       card.classList.toggle("is-hidden", !shouldShow);
       if (shouldShow) visibleCount += 1;
+    });
+
+    productSections.forEach((section) => {
+      const hasVisibleCards = Array.from(section.querySelectorAll("[data-crm]")).some(
+        (card) => !card.classList.contains("is-hidden")
+      );
+      section.classList.toggle("is-hidden", !hasVisibleCards);
     });
 
     filterEmpty?.classList.toggle("is-hidden", visibleCount !== 0);
