@@ -982,6 +982,12 @@ textarea:focus {
   }
 }
 
+.filter-row .crm-filters::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 @media (max-width: 680px) {
   .product-filters,
   .filter-row {
@@ -1039,6 +1045,10 @@ textarea:focus {
 
 .open-source-card {
   min-height: 330px;
+}
+
+.library-card[id] {
+  scroll-margin-top: 7rem;
 }
 
 .open-source-card .library-card-logo {
@@ -2657,7 +2667,7 @@ textarea:focus {
   }
 
   .nav-links.open .nav-products.open .products-menu {
-    max-height: 12rem;
+    max-height: 19rem;
   }
 
   .nav-links.open .products-menu a {
@@ -4486,9 +4496,36 @@ textarea:focus {
   text-align: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
+  .library-heading {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .library-heading > * {
+    min-width: 0;
+  }
+
   .product-filters {
     justify-self: start;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .filter-row {
+    grid-template-columns: 5.4rem minmax(0, 1fr);
+    width: 100%;
+    min-width: 0;
+  }
+
+  .filter-row .crm-filters {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    clip-path: inset(0 round 999px);
   }
 }
 
@@ -4510,5 +4547,8 @@ textarea:focus {
     width: max-content;
     max-width: calc(100vw - 2.5rem);
     overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    clip-path: inset(0 round 999px);
   }
 }

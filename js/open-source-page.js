@@ -16,8 +16,10 @@ document.body.insertAdjacentHTML(
             Products <span aria-hidden="true"></span>
           </button>
           <div class="products-menu" id="products-menu">
-            <a href="../products.html#yardi"><small>Yardi</small><strong>Connector for Outlook</strong></a>
-            <a href="../products.html#espocrm"><small>EspoCRM</small><strong>Signature Manager</strong></a>
+            <a href="../products.html#yardi"><small>Applications for</small><strong>Yardi</strong></a>
+            <a href="../products.html#espocrm"><small>Applications for</small><strong>EspoCRM</strong></a>
+            <a href="../products.html#frappe"><small>Applications for</small><strong>Frappe</strong></a>
+            <a href="../products.html#odoo"><small>Applications for</small><strong>Odoo Community</strong></a>
           </div>
         </div>
         <a href="../index.html#process">Process</a>

@@ -135,6 +135,8 @@ if (crmFilterButtons.length && typeFilterButtons.length && productCards.length) 
     freeFilterButton.setAttribute("aria-pressed", String(freeOnly));
     applyProductFilters();
   });
+
+  applyProductFilters();
 }
 
 if (traceMessage && consoleState) {
