@@ -232,7 +232,7 @@ document.querySelector(".contact-form, .contact-form-new")?.addEventListener("su
     button.textContent = "Sent";
   } catch (error) {
     if (status) {
-      status.textContent = "Something went wrong. Please email contact@tapiobridge.com directly.";
+      status.textContent = "Something went wrong. Please email website@tapiobridge.com directly.";
       status.classList.add("is-error");
     }
     button.textContent = originalText;
