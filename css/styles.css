@@ -2103,7 +2103,30 @@ textarea:focus {
   .split { width: calc(100% - 2.5rem); padding: 5rem 0; }
   .statement { min-height: 410px; padding: 5rem 1.25rem; }
   .contact-form-new { grid-template-columns: 1fr; }
-  .contact-form-new label { grid-column: 1; }
+  .contact-form-new label {
+    grid-column: 1;
+    font-size: 0.92rem;
+  }
+  .contact-form-new input,
+  .contact-form-new textarea {
+    min-height: 3.05rem;
+    padding: 0.9rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .contact-form-new textarea {
+    min-height: 8.5rem;
+  }
+  .contact-form-new .privacy-note,
+  .contact-form-new .form-status {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .contact-form-new button {
+    min-height: 3.05rem;
+    padding: 0.85rem 1.05rem;
+    font-size: 1rem;
+  }
 }
 
 /* Work process: sourced Lucide icons in the reference grid layout */
