@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-family: "Open Sans", Arial, sans-serif;
+  overflow-x: clip;
 }
 
 a {
@@ -914,10 +916,9 @@ textarea:focus {
   z-index: -1;
   top: 0;
   bottom: 0;
-  left: 50%;
-  width: 100vw;
+  right: calc(50% - 50vw);
+  left: calc(50% - 50vw);
   background: #fff;
-  transform: translateX(-50%);
 }
 
 /* Combined CRM, app-type and free-product filters */
